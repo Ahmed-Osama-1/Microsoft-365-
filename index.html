@@ -1,0 +1,370 @@
+<style>
+  .phase {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .phase-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .phase-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+  .phase-sub {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 1px;
+  }
+  .modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .mod {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 0.5px solid transparent;
+  }
+  .mod-blue {
+    background: var(--color-background-info);
+    color: var(--color-text-info);
+  }
+  .mod-purple {
+    background: #eeedfe;
+    color: #3c3489;
+  }
+  .mod-teal {
+    background: #e1f5ee;
+    color: #085041;
+  }
+  .mod-amber {
+    background: #faeeda;
+    color: #633806;
+  }
+  .mod-coral {
+    background: #faece7;
+    color: #712b13;
+  }
+  .scope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .scope-card {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 10px 12px;
+    border: 0.5px solid var(--color-border-tertiary);
+  }
+  .scope-card h4 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 4px;
+  }
+  .scope-card p {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+</style>
+<div style="padding: 1rem 0">
+  <div
+    style="
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    "
+  >
+    Here is exactly what we will cover together — 7 scopes, each with concepts +
+    best practices + step-by-step configuration. We go in order because each
+    scope builds on the one before.
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="dot" style="background: #185fa5"></div>
+      Identity & access
+    </div>
+    <div class="legend-item">
+      <div class="dot" style="background: #534ab7"></div>
+      Device & endpoint
+    </div>
+    <div class="legend-item">
+      <div class="dot" style="background: #0f6e56"></div>
+      Data protection
+    </div>
+    <div class="legend-item">
+      <div class="dot" style="background: #ba7517"></div>
+      Apps & cloud
+    </div>
+    <div class="legend-item">
+      <div class="dot" style="background: #993c1d"></div>
+      Threat detection
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div
+        class="phase-num"
+        style="
+          background: var(--color-background-info);
+          color: var(--color-text-info);
+        "
+      >
+        1
+      </div>
+      <div>
+        <div class="phase-title">Tenant foundations</div>
+        <div class="phase-sub">
+          Before anything else — the base must be right
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-blue">Break-glass accounts</span>
+      <span class="mod mod-blue"
+        >Security defaults OFF (we replace with CA)</span
+      >
+      <span class="mod mod-blue">Custom domain verified</span>
+      <span class="mod mod-blue">Global admin hardened</span>
+      <span class="mod mod-blue">Audit logging enabled</span>
+      <span class="mod mod-blue">Entra ID P2 confirmed</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #e6f1fb; color: #4a6987">2</div>
+      <div>
+        <div class="phase-title">Entra ID — identity hardening</div>
+        <div class="phase-sub">
+          Zero Trust identity — who are you and can I trust your device?
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-blue">SSPR setup</span>
+      <span class="mod mod-blue">Authentication methods policy</span>
+      <span class="mod mod-blue">FIDO2 / Passkeys</span>
+      <span class="mod mod-blue">Password protection</span>
+      <span class="mod mod-blue">Identity Protection (risk policies)</span>
+      <span class="mod mod-blue">PIM — privileged roles</span>
+      <span class="mod mod-blue">Access reviews</span>
+      <span class="mod mod-blue">Named locations</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #e6f1fb; color: #0a253f">3</div>
+      <div>
+        <div class="phase-title">Conditional access</div>
+        <div class="phase-sub">
+          Every sign-in evaluated against your policy set
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-blue">CA architecture & policy layers</span>
+      <span class="mod mod-blue">Phishing-resistant MFA (FIDO2 / WHfB)</span>
+      <span class="mod mod-blue">Compliant device required</span>
+      <span class="mod mod-blue">Block legacy auth</span>
+      <span class="mod mod-blue">Sign-in risk policy</span>
+      <span class="mod mod-blue">User risk policy</span>
+      <span class="mod mod-blue">Admin-only from SAW/PAW</span>
+      <span class="mod mod-blue">Named location restrictions</span>
+      <span class="mod mod-blue">Session controls (MCAS integration)</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #eeedfe; color: #3c3489">4</div>
+      <div>
+        <div class="phase-title">Intune — device management</div>
+        <div class="phase-sub">
+          Nothing reaches your data from an unmanaged device
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-purple">Entra join + Intune auto-enroll</span>
+      <span class="mod mod-purple">Windows Hello for Business</span>
+      <span class="mod mod-purple">Compliance policies (Win + Mac)</span>
+      <span class="mod mod-purple">Configuration profiles</span>
+      <span class="mod mod-purple">BitLocker encryption</span>
+      <span class="mod mod-purple">Defender for Endpoint onboarding</span>
+      <span class="mod mod-purple">App protection policies (MAM)</span>
+      <span class="mod mod-purple">Update rings</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #eeedfe; color: #3c3489">5</div>
+      <div>
+        <div class="phase-title">Microsoft Defender suite</div>
+        <div class="phase-sub">
+          Detect, investigate, and respond across all attack surfaces
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-purple">Defender for Endpoint (MDE)</span>
+      <span class="mod mod-purple">Defender for Identity (MDI)</span>
+      <span class="mod mod-purple">Defender for Office 365 (MDO)</span>
+      <span class="mod mod-purple">Defender for Cloud Apps (MDCA)</span>
+      <span class="mod mod-purple">Microsoft Sentinel (SIEM)</span>
+      <span class="mod mod-purple">Attack surface reduction rules</span>
+      <span class="mod mod-purple">Secure Score — targets</span>
+      <span class="mod mod-purple">Unified XDR portal</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #e1f5ee; color: #085041">6</div>
+      <div>
+        <div class="phase-title">
+          Data protection — DLP + SharePoint + Purview
+        </div>
+        <div class="phase-sub">
+          Protect data at rest, in transit, and at the exit point
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-teal">Sensitivity labels (MIP)</span>
+      <span class="mod mod-teal">Auto-labeling policies</span>
+      <span class="mod mod-teal">DLP policies (M365 + Endpoint)</span>
+      <span class="mod mod-teal">SharePoint — external sharing controls</span>
+      <span class="mod mod-teal">SharePoint — information barriers</span>
+      <span class="mod mod-teal">Retention policies</span>
+      <span class="mod mod-teal">Insider risk management</span>
+      <span class="mod mod-teal">Communication compliance</span>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="background: #faeeda; color: #633806">7</div>
+      <div>
+        <div class="phase-title">
+          Anaqua (3rd-party SaaS) + Cloud app governance
+        </div>
+        <div class="phase-sub">
+          Apply your security model to apps outside Microsoft 365
+        </div>
+      </div>
+    </div>
+    <div class="modules">
+      <span class="mod mod-amber">SAML/OIDC SSO via Entra</span>
+      <span class="mod mod-amber">Conditional access for Anaqua</span>
+      <span class="mod mod-amber">MCAS — app discovery</span>
+      <span class="mod mod-amber">MCAS — session control (reverse proxy)</span>
+      <span class="mod mod-amber">OAuth app governance</span>
+      <span class="mod mod-amber">Shadow IT discovery</span>
+      <span class="mod mod-amber">App risk scoring</span>
+    </div>
+  </div>
+
+  <div
+    style="
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      border: 0.5px solid var(--color-border-tertiary);
+    "
+  >
+    <div
+      style="
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--color-text-primary);
+        margin-bottom: 6px;
+      "
+    >
+      How we will work through each scope
+    </div>
+    <div
+      style="
+        font-size: 12px;
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+      "
+    >
+      For every scope: (1) concept explanation with visuals, (2) why this
+      setting matters, (3) exact portal navigation + step-by-step config, (4)
+      validation — how to confirm it works, (5) common mistakes to avoid.
+    </div>
+  </div>
+
+  <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap">
+    <button
+      onclick="
+        sendPrompt(
+          'Start with Scope 1 — tenant foundations. Explain the concepts and then walk me through the configuration step by step.',
+        )
+      "
+      style="font-size: 12px; padding: 6px 14px"
+    >
+      Start with Scope 1 — tenant foundations ↗
+    </button>
+    <button
+      onclick="
+        sendPrompt(
+          'Give me an overview of how all 7 scopes connect to each other in a Zero Trust model.',
+        )
+      "
+      style="font-size: 12px; padding: 6px 14px"
+    >
+      How do all 7 scopes connect? ↗
+    </button>
+  </div>
+</div>
